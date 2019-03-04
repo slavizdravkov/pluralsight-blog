@@ -18,6 +18,16 @@ class CreatePostsTable extends Migration
             $table->timestamps();
             $table->string('title');
             $table->text('content');
+            $table->integer('user_id')->unsigned();
+        });
+
+        Schema::table('posts', function (Blueprint $table) {
+            $table
+                ->foreign('user_id')
+                ->references('id')
+                ->on('users')
+                ->onDelete('cascade')
+                ->onUpdate('cascade');
         });
     }
 

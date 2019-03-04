@@ -6,13 +6,16 @@
 
     <title>Laravel</title>
 
-    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+    <!-- Scripts -->
+    <script src="{{ asset('js/app.js') }}" defer></script>
 
+    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 </head>
 <body>
 @include('partials.header')
 <div class="container">
     @yield('content')
 </div>
+<script></script>
 </body>
 </html>

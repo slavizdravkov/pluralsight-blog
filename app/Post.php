@@ -27,4 +27,9 @@ class Post extends Model
     {
         return strtoupper($value);
     }
+
+    public function user()
+    {
+        return $this->belongsTo('App\User');
+    }
 }
